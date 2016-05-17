@@ -1,0 +1,4 @@
+.cmb-type-radio-image li{display:inline-block;margin-right:10px;float:left;}
+.cmb-type-radio-image input[type=radio] {display:none;}
+.cmb-radio-image {border:1px solid #fff;padding:2px;width:80px;}
+.cmb-radio-image-selected {border:1px solid #ccc; }
