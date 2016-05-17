@@ -21,7 +21,7 @@ class ASDB_Radio_Image_Field {
 
 		if ($options) {
 			echo '<div class="cmb-row cmb-type-radio-image ">';
-				echo '<ul class="cmb2-radio-list cmb2-list">';
+			echo '<ul class="cmb2-radio-list cmb2-list">';
 
     		foreach ( $options as $k => $v) {
             	$args = array(
