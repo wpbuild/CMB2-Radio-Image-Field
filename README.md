@@ -1,14 +1,14 @@
 # CMB2 Radio Image Field
 
 ## Description
-Radio Image field type for CMB2.
+Radio Image field type for [CMB2](https://github.com/WebDevStudios/CMB2).
 
 ##Install
-You can install slider field as a Wordpress plugin
+You can install Radio Image field as a Wordpress plugin
 
 1. Download plugin
 2. Place in `wp-content/plugins` directory
-3. Active in Wordpress plugin section
+3. Activate in Wordpress plugin section
 
 ## Usage
 `radio_image` as a field type.
@@ -32,6 +32,12 @@ You can install slider field as a Wordpress plugin
 	      ),
 ),
 ```
+## In Template
+```php
+$cat_style = wds_page_builder_get_this_part_data('cat_style');
+echo $cat_style[0]; 
+```
+
 ## Screenshots
 
 ![Image](screen-1.png?raw=true)
