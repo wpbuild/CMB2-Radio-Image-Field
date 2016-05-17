@@ -16,20 +16,20 @@ You can install Radio Image field as a Wordpress plugin
 ```php
  array(
 	'name'       => __( 'Block Style', 'asdbstart' ),
-		'desc'       => __( 'Select Block Style', 'asdbstart' ),
-			'id'         => 'cat_style',
-			'type'       => 'radio_image',
-			'default'	=> 'style-1',
-			'options' => array(
-				'style-1'	=> __('Style 1', 'asdbstart'),
-				'style-2'	=> __('Style 2', 'asdbstart'),
-				'style-3'	=> __('Style 3', 'asdbstart'),
-				),
-		  'src' => array(
-				'style-1'	=> get_template_directory_uri() . '/assets/images/theme/style-1.png',
-				'style-2'	=> get_template_directory_uri() . '/assets/images/theme/style-2.png',
-				'style-3'	=> get_template_directory_uri() . '/assets/images/theme/style-3.png'
-	      ),
+	'desc'       => __( 'Select Block Style', 'asdbstart' ),
+	'id'         => 'cat_style',
+	'type'       => 'radio_image',
+	'default'	=> 'style-1',
+	'options' => array(
+		'style-1'	=> __('Style 1', 'asdbstart'),
+		'style-2'	=> __('Style 2', 'asdbstart'),
+		'style-3'	=> __('Style 3', 'asdbstart'),
+	),
+	'src' => array(
+		'style-1'	=> get_template_directory_uri() . '/assets/images/theme/style-1.png',
+		'style-2'	=> get_template_directory_uri() . '/assets/images/theme/style-2.png',
+		'style-3'	=> get_template_directory_uri() . '/assets/images/theme/style-3.png'
+	),
 ),
 ```
 ## In Template
