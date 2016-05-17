@@ -14,17 +14,16 @@ class ASDB_Radio_Image_Field {
 	}
 	public function cmb_render_radio_image( $field, $value, $object_id, $object_type, $field_type_object ) {
 		$this->setup_admin_scripts();
-	    $options = '';
-    	$opt = $field->args['options'];
+    	$options = $field->args['options'];
     	$src = $field->args['src'];
     	$i = 1;
     	$values = (array) $value;
 
-		if ($opt) {
+		if ($options) {
 			echo '<div class="cmb-row cmb-type-radio-image ">';
 				echo '<ul class="cmb2-radio-list cmb2-list">';
 
-    		foreach ( $opt as $k => $v) {
+    		foreach ( $options as $k => $v) {
             	$args = array(
                 	'value' => $k,
                 	'label' => '<img src="' . esc_url( $src[$k] ) . '" alt="' . esc_attr( $v ) .'" title="' . esc_attr( $v ) .'" class="cmb-radio-image " />',
