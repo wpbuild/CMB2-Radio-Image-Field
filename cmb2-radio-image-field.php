@@ -14,10 +14,10 @@ class ASDB_Radio_Image_Field {
 	}
 	public function cmb_render_radio_image( $field, $value, $object_id, $object_type, $field_type_object ) {
 		$this->setup_admin_scripts();
-    	$options = $field->args['options'];
-    	$src = $field->args['src'];
-    	$i = 1;
-    	$values = (array) $value;
+		$options = $field->args['options'];
+		$src = $field->args['src'];
+		$i = 1;
+		$values = (array) $value;
 
 		if ($options) {
 			echo '<div class="cmb-row cmb-type-radio-image ">';
@@ -25,20 +25,20 @@ class ASDB_Radio_Image_Field {
 
     		foreach ( $options as $k => $v) {
             	$args = array(
-                	'value' => $k,
-                	'label' => '<img src="' . esc_url( $src[$k] ) . '" alt="' . esc_attr( $v ) .'" title="' . esc_attr( $v ) .'" class="cmb-radio-image " />',
-                	'type' => 'radio',
-                	'name' => $field->args['_name'] . '[]',
-            	);
-            	if ( in_array( $k, $values ) ) {
-	                $args[ 'checked' ] = 'checked';
-    	            $args[ 'label' ] = '<img src="' . esc_url( $src[$k] ) . '" alt="' . esc_attr( $v ) .'" title="' . esc_attr( $v ) .'" class="cmb-radio-image cmb-radio-image-selected " />';
-        	    }
+			'value' => $k,
+			'label' => '<img src="' . esc_url( $src[$k] ) . '" alt="' . esc_attr( $v ) .'" title="' . esc_attr( $v ) .'" class="cmb-radio-image " />',
+			'type' => 'radio',
+			'name' => $field->args['_name'] . '[]',
+		);
+		if ( in_array( $k, $values ) ) {
+			$args[ 'checked' ] = 'checked';
+			$args[ 'label' ] = '<img src="' . esc_url( $src[$k] ) . '" alt="' . esc_attr( $v ) .'" title="' . esc_attr( $v ) .'" class="cmb-radio-image cmb-radio-image-selected " />';
+		}
             	echo $field_type_object->list_input( $args, $i );
             	$i++;
-        	}
-				echo '</ul><br class="clear">';
-				$field_type_object->_desc( true, true );
+		}
+			echo '</ul><br class="clear">';
+			$field_type_object->_desc( true, true );
 			echo '</div>';
 		}
 	}
