@@ -35,7 +35,7 @@ You can install Radio Image field as a Wordpress plugin
 ## In Template
 ```php
 
-$cat_style= get_post_meta($post->ID, 'cat_style', true);
+$cat_style = get_post_meta($post->ID, 'cat_style', true);
 //for WDS Page Builder
 //$cat_style = wds_page_builder_get_this_part_data('cat_style');
 
